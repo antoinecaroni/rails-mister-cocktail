@@ -1,0 +1,24 @@
+<div class="container jumbotron">
+<h1>Cocktail: <%= @cocktail.name %></h1>
+<hr>
+
+<hr>
+
+<hr>
+
+<ul>
+Doses: <% @cocktail.doses.each do |dose| %>
+<li> <p> <%= dose.content %> --- Rating : <%= dose.rating %> / 5</p> </li>
+<% end %>
+</ul>
+
+
+
+
+
+<hr>
+<%= link_to("Add a new dose", new_cocktail_dose_path(@cocktail), class:"btn btn-primary") %>
+
+<%= link_to("Back to cocktails", cocktails_path, class:"btn btn-primary") %>
+
+</div>
