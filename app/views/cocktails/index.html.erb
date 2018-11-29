@@ -1,22 +1,28 @@
-<div class="container jumbotron">
-
-<h1>My list of Cocktails</h1>
-
-<hr>
-
-  <ul class="list-group">
-  <% @cocktails.each do |cocktail| %>
-  <li class="list-group-item">
-    <%= link_to(cocktail.name, cocktail_path(cocktail)) %>
-  </li>
-  <% end %>
-  </ul>
-  <hr>
-
-
-<%= link_to('New Cocktail', new_cocktail_path, class:'btn btn-success btn-lg')%>
-
-
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%),url('https://images6.alphacoders.com/659/659174.jpg');">
+  <div class="banner-content">
+    <h1>Cocktails</h1>
+    <p>The place to beer</p>
+  </div>
 </div>
 
+
+<div class="container">
+
+    <h1>Cocktails :</h1>
+
+    <br>
+
+    <% @cocktails.each do |cocktail| %>
+      <% image_url = "https://source.unsplash.com/featured/286x180/?cocktail,#{cocktail.name}"%>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card" >
+            <img class="card-img-top" src=<%=image_url%> alt="Cocktail image">
+            <div class="card-body">
+              <h5 class="card-title"><%=cocktail.name %></h5>
+              <%= link_to("More infos", cocktail_path(cocktail), class: "btn btn-primary")%>
+            </div>
+        </div>
+      </div>
+    <% end %>
 </div>
+

@@ -1,6 +1,4 @@
-<%= simple_form_for [@restaurant] do |f| %>
+<%= simple_form_for @cocktail do |f| %>
   <%= f.input :name %>
-  <%= f.association :address %>
-  <%= f.association :phone_number %>
-  <%= f.submit "Save the Restaurant", class: "btn btn-primary" %>
+  <%= f.button :submit %>
 <% end %>

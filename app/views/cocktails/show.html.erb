@@ -1,24 +1,37 @@
 <div class="container jumbotron">
-<h1>Cocktail: <%= @cocktail.name %></h1>
-<hr>
 
-<hr>
+<h1 class="text-center"> <%= @cocktail.name %> </h1>
 
-<hr>
+<% image_url = "https://source.unsplash.com/featured/200x200/?cocktail,#{@cocktail.name}"%>
+<img src=<%=image_url%> alt="Cocktail image">
+
+
+<div class="ingredients">
 
 <ul>
-Doses: <% @cocktail.doses.each do |dose| %>
-<li> <p> <%= dose.content %> --- Rating : <%= dose.rating %> / 5</p> </li>
+<p> Doses : <%@cocktail.doses.each do |dose|%></p>
+<li> <%= dose.description %> <%= dose.ingredient.name %> <%= link_to raw('<i class="far fa-trash-alt"></i>'), dose_path(dose),
+     method: :delete,
+     data: { confirm: "Are you sure?" } %>
+</li>
+
 <% end %>
+
 </ul>
 
-
-
-
+</div>
 
 <hr>
-<%= link_to("Add a new dose", new_cocktail_dose_path(@cocktail), class:"btn btn-primary") %>
+<h3>Add a new dose</h3>
+<%= render 'doses/form' %>
 
-<%= link_to("Back to cocktails", cocktails_path, class:"btn btn-primary") %>
+<hr>
+<%= link_to("Add a new dose", new_cocktail_dose_path(@cocktail), class: "btn btn-success") %>
+
+
+<%= link_to("Back to the cocktails", cocktails_path, class: "btn btn-primary") %>
+
+
+
 
 </div>
