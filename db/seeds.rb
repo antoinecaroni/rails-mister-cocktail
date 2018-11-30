@@ -24,5 +24,11 @@ Cocktail.create(name: "Kronenbourg")
 Cocktail.create(name: "Carapils")
 Cocktail.create(name: "Atlas")
 Cocktail.create(name: "Leffe")
+Cocktail.create(name: "Duvel")
+Cocktail.create(name: "Goudale")
+Cocktail.create(name: "Anostéké")
+Cocktail.create(name: "Pelforth")
+Cocktail.create(name: "Grimbergen")
+Cocktail.create(name: "Bavaria")
 
 puts 'Finished!'
