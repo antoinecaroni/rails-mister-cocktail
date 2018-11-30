@@ -1,28 +1,56 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%),url('https://images6.alphacoders.com/659/659174.jpg');">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%),url('https://i0.wp.com/res.cloudinary.com/aleteia/image/fetch/c_fill,g_auto,w_620,h_310/https://aleteiafrench.files.wordpress.com/2017/09/shutterstock-biere.jpg');">
   <div class="banner-content">
-    <h1>Cocktails</h1>
-    <p>The place to beer</p>
+    <h1>The Place To Beer</h1>
   </div>
 </div>
 
 
 <div class="container">
 
-    <h1>Cocktails :</h1>
-
-    <br>
+  <div class="row">
 
     <% @cocktails.each do |cocktail| %>
-      <% image_url = "https://source.unsplash.com/featured/286x180/?cocktail,#{cocktail.name}"%>
-        <div class="col-xs-12 col-sm-4">
-          <div class="card" >
-            <img class="card-img-top" src=<%=image_url%> alt="Cocktail image">
-            <div class="card-body">
-              <h5 class="card-title"><%=cocktail.name %></h5>
-              <%= link_to("More infos", cocktail_path(cocktail), class: "btn btn-primary")%>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" >
+          <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url(<%="https://source.unsplash.com/featured/286x180/?biere,#{cocktail.name}"%>);">
+            <span class="card-category"></span>
+            <div class="card-description">
+              <h2><%=cocktail.name %></h2>
+              <p></p>
             </div>
+            <%= link_to("More infos", cocktail_path(cocktail), class: "card-link")%>
+          </div>
+
+          <div class="card-footer">
+
+            <div class="controls">
+              <a href="">
+              <i class="fa fa-star"></i>
+              </a>
+              <a href="">
+              <i class="fa fa-heart"></i>
+              </a>
+              <a href="">
+              <i class="fa fa-share"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    <% end %>
+    <%end %>
+  </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 

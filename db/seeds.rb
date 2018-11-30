@@ -2,21 +2,27 @@ puts 'Cleaning database...'
 Cocktail.destroy_all
 Ingredient.destroy_all
 
-
 puts 'Creating cocktails...'
 
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
-Ingredient.create(name: "strawberry")
-Ingredient.create(name: "Vodka")
-Ingredient.create(name: "Tekila")
-Ingredient.create(name: "Whisky")
+Ingredient.create(name: "Eau")
+Ingredient.create(name: "Houblon")
+Ingredient.create(name: "Orge")
+Ingredient.create(name: "Malt Pilsen ")
+Ingredient.create(name: "Malt Pale Ale")
+Ingredient.create(name: "Malt Diastasique")
+Ingredient.create(name: "Malt Distilling")
+Ingredient.create(name: "Malt Acide ")
+Ingredient.create(name: "Malt Whisky light")
+Ingredient.create(name: "Malt Roasted Barley")
 
-Cocktail.create(name: "Mojito")
-Cocktail.create(name: "Cuba libre")
-Cocktail.create(name: "Beer")
-Cocktail.create(name: "Spritz")
-Cocktail.create(name: "Old Fashioned")
+Cocktail.create(name: "Heineken")
+Cocktail.create(name: "Koeningsbier")
+Cocktail.create(name: "8,6")
+Cocktail.create(name: "Calsberg")
+Cocktail.create(name: "Amsterdam")
+Cocktail.create(name: "Kronenbourg")
+Cocktail.create(name: "Carapils")
+Cocktail.create(name: "Atlas")
+Cocktail.create(name: "Leffe")
 
 puts 'Finished!'
